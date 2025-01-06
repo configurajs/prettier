@@ -31,13 +31,13 @@
     "url": "https://github.com/configurajs/eslint/issues"
   },
   "scripts": {
-    "prepare": "simple-git-hooks",
+    "prepare": "simple-git-hooks && pnpm build",
     "dev": "tsup src/index.ts --format esm --watch --dts",
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "lint": "eslint . --fix",
     "format": "prettier --write .",
     "clean": "rimraf node_modules dist",
-    "release": "pnpm build && vr release"
+    "release": "vr release"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec nano-staged --allow-empty",
