@@ -23,6 +23,9 @@
 
 ## Intro
 
+> [!TIP]
+> Please make sure that the prettier version is `3.0.0+`
+
 ### Installation
 
 ```shell
