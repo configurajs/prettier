@@ -3,6 +3,7 @@
   <h1>Prettier</h1>
   <p>简洁、通用的prettier配置</p>
   <p>
+    <span>中文</span> | 
     <a href="https://github.com/configurajs/prettier/blob/main、README.md">English</a>
   </p>
   <p>
@@ -33,7 +34,7 @@ yarn add @configurajs/prettier -D
 pnpm add @configurajs/prettier -D
 ```
 
-### 使用
+### 基础使用
 
 ```js
 // prettier.config.js
@@ -41,6 +42,8 @@ import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig()
 ```
+
+### 进阶配置
 
 默认配置包含 [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) 和 [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss), 这两个插件用来规范引入和样式
 

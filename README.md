@@ -3,6 +3,7 @@
   <h1>Prettier</h1>
   <p>A simple prettier flat configuration</p>
   <p>
+    <span>English</span> | 
     <a href="https://github.com/configurajs/prettier/blob/main/README.zh-CN.md">中文介绍</a>
   </p>
   <p>
@@ -33,7 +34,7 @@ yarn add @configurajs/prettier -D
 pnpm add @configurajs/prettier -D
 ```
 
-### Usage
+### Basic Usage
 
 ```js
 // prettier.config.js
@@ -41,6 +42,8 @@ import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig()
 ```
+
+### Advanced Configuration
 
 The default config includes two plugin [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) and [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss), which used to sort imports and classes.  
 
