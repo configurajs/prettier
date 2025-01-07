@@ -1,42 +1,42 @@
 {
   "name": "@configurajs/prettier",
   "version": "0.0.2",
-  "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
   "description": "A simple prettier flat configuration",
   "keywords": [
     "prettier",
     "preset",
     "config"
   ],
-  "author": "haoziqaq <357229046@qq.com>",
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "bugs": {
+    "url": "https://github.com/configurajs/eslint/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/configurajs/eslint.git"
   },
-  "bugs": {
-    "url": "https://github.com/configurajs/eslint/issues"
+  "license": "MIT",
+  "author": "haoziqaq <357229046@qq.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "prepare": "simple-git-hooks && pnpm build",
-    "dev": "tsup src/index.ts --format esm --watch --dts",
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
-    "lint": "eslint . --fix",
-    "format": "prettier --write .",
     "clean": "rimraf node_modules dist",
+    "dev": "tsup src/index.ts --format esm --watch --dts",
+    "format": "prettier --write .",
+    "lint": "eslint . --fix",
+    "prepare": "simple-git-hooks && pnpm build",
     "release": "vr release"
   },
   "simple-git-hooks": {
@@ -49,6 +49,12 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "rattail": "^1.0.18",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@configurajs/eslint": "^0.0.7",
@@ -70,11 +76,5 @@
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "pnpm": ">=9.0"
-  },
-  "dependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "rattail": "^1.0.18",
-    "vue": "^3.5.13"
   }
 }
