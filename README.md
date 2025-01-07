@@ -45,7 +45,7 @@ export default defineConfig()
 
 ### Advanced Configuration
 
-The default config includes two plugin [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) and [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss), which used to sort imports and classes.  
+The default config includes two plugin [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) and [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss), which used to sort imports and classes.
 
 ```js
 {
@@ -56,6 +56,7 @@ The default config includes two plugin [@ianvs/prettier-plugin-sort-imports](htt
   plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss']
 }
 ```
+
 If you don't want to enable these plugins, just update you config like this.
 
 ```js

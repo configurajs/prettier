@@ -56,6 +56,7 @@ export default defineConfig()
   plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss']
 }
 ```
+
 如果你不想启用这两个插件，可参考下面示例
 
 ```js
@@ -63,7 +64,7 @@ export default defineConfig()
   singleQuote: true,
   ...
   /**
-   * 设置为false可移除 @ianvs/prettier-plugin-sort-imports 
+   * 设置为false可移除 @ianvs/prettier-plugin-sort-imports
    */
   sortImports: false,
   /**
@@ -72,6 +73,7 @@ export default defineConfig()
   sortAtomicClass: false,
 }
 ```
+
 如果你想修改prettier规则，可参考下面示例
 
 ```js
