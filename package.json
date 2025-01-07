@@ -8,11 +8,11 @@
     "config"
   ],
   "bugs": {
-    "url": "https://github.com/configurajs/eslint/issues"
+    "url": "https://github.com/configurajs/prettier/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/configurajs/eslint.git"
+    "url": "git+https://github.com/configurajs/prettier.git"
   },
   "license": "MIT",
   "author": "haoziqaq <357229046@qq.com>",

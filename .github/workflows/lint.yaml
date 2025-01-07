@@ -21,8 +21,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Run builder
-        run: pnpm build
-
       - name: Run linter
         run: pnpm lint
