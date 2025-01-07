@@ -4,7 +4,7 @@
   <p>简洁、通用的prettier配置</p>
   <p>
     <span>中文</span> | 
-    <a href="https://github.com/configurajs/prettier/blob/main、README.md">English</a>
+    <a href="https://github.com/configurajs/prettier/blob/main/README.md">English</a>
   </p>
   <p>
     <img src="https://img.shields.io/github/package-json/v/configurajs/prettier" alt="version">
