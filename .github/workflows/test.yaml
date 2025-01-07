@@ -1,9 +1,9 @@
-name: Lint
+name: Test
 
 on: [push, pull_request]
 
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,6 +20,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
+
+      - name: Run builder
+        run: pnpm build
 
       - name: Run test cases
         run: pnpm test
