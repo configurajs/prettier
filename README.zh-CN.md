@@ -40,10 +40,17 @@ pnpm add @configurajs/prettier -D
 ### 基础使用
 
 ```js
-// prettier.config.js
+// prettier.config.mjs
 import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig()
+```
+
+```js
+// prettier.config.cjs
+const { defineConfig } = require('@configurajs/prettier')
+
+module.exports = defineConfig()
 ```
 
 ### 进阶配置
@@ -80,10 +87,22 @@ export default defineConfig()
 如果你想修改prettier规则，可参考下面示例
 
 ```js
-// prettier.config.js
+// prettier.config.mjs
 import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig({
+  // 添加你的prettier规则
+  printWidth: 100,
+  quoteProps: 'as-needed',
+  singleAttributePerLine: true,
+})
+```
+
+```js
+// prettier.config.cjs
+const { defineConfig } = require('@configurajs/prettier')
+
+module.exports = defineConfig({
   // 添加你的prettier规则
   printWidth: 100,
   quoteProps: 'as-needed',

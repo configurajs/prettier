@@ -40,10 +40,17 @@ pnpm add @configurajs/prettier -D
 ### Basic Usage
 
 ```js
-// prettier.config.js
+// prettier.config.mjs
 import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig()
+```
+
+```js
+// prettier.config.cjs
+const { defineConfig } = require('@configurajs/prettier')
+
+module.exports = defineConfig()
 ```
 
 ### Advanced Configuration
@@ -80,10 +87,22 @@ If you don't want to enable these plugins, just update you config like this.
 If you want to add some you favorite rules, just do it like this.
 
 ```js
-// prettier.config.js
+// prettier.config.mjs
 import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig({
+  // add your favorite prettier rules here
+  printWidth: 100,
+  quoteProps: 'as-needed',
+  singleAttributePerLine: true,
+})
+```
+
+```js
+// prettier.config.cjs
+const { defineConfig } = require('@configurajs/prettier')
+
+module.exports = defineConfig({
   // add your favorite prettier rules here
   printWidth: 100,
   quoteProps: 'as-needed',
