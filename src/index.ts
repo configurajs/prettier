@@ -47,12 +47,16 @@ export function defineConfig(options: DefineConfigOptions = {}): Config {
       : undefined,
     plugins: [...builtinPlugins, ...normalizeToArray(plugins)],
     overrides: [
-      {
-        files: '**/package.json',
-        options: {
-          packageSortOrder,
-        },
-      },
+      ...(sortPackageJson
+        ? [
+            {
+              files: '**/package.json',
+              options: {
+                packageSortOrder,
+              },
+            },
+          ]
+        : []),
       ...normalizeToArray(overrides),
     ],
     ...rest,
