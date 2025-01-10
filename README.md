@@ -89,6 +89,11 @@ export type DefineConfigOptions = Config & {
    * @default ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]']
    */
   importsOrder?: string[]
+  /**
+   * Ordering of package.json properties
+   * @default []
+   */
+  packageJsonOrder?: string[]
 }
 ```
 

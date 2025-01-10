@@ -22,6 +22,11 @@ export type DefineConfigOptions = Config & {
    * @default ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]']
    */
   importsOrder?: string[]
+  /**
+   * Ordering of package.json properties
+   * @default []
+   */
+  packageJsonOrder?: string[]
 }
 
 export function defineConfig(options: DefineConfigOptions = {}): Config {
@@ -30,6 +35,7 @@ export function defineConfig(options: DefineConfigOptions = {}): Config {
     sortAtomicClass = true,
     sortPackageJson = true,
     importsOrder = ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]'],
+    packageJsonOrder = [],
     plugins = [],
     ...rest
   } = options
@@ -53,6 +59,7 @@ export function defineConfig(options: DefineConfigOptions = {}): Config {
     singleQuote: true,
     semi: false,
     importOrder: sortImports ? importsOrder : undefined,
+    packageSortOrder: sortPackageJson ? packageJsonOrder : undefined,
     plugins: [...builtinPlugins, ...normalizeToArray(plugins)],
     ...rest,
   }

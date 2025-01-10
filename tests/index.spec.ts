@@ -18,6 +18,14 @@ describe('test config', () => {
     expect(defineConfig({ sortPackageJson: false })).toMatchSnapshot()
   })
 
+  it('custom importsOrder', () => {
+    expect(defineConfig({ importsOrder: ['^@/(.*)$', '^~/(.*)$', '^[.]'] })).toMatchSnapshot()
+  })
+
+  it('custom packageJsonOrder', () => {
+    expect(defineConfig({ packageJsonOrder: ['name', 'version'] })).toMatchSnapshot()
+  })
+
   it('custom config', () => {
     expect(
       defineConfig({

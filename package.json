@@ -33,7 +33,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "clean": "rimraf node_modules dist",
-    "dev": "tsup src/index.ts --format esm --watch --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
     "format": "prettier --write .",
     "lint": "eslint . --fix",
     "prepare": "simple-git-hooks && pnpm build",

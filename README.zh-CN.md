@@ -89,6 +89,11 @@ export type DefineConfigOptions = Config & {
    * @default ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]']
    */
   importsOrder?: string[]
+  /**
+   * package.json 属性的排序顺序
+   * @default []
+   */
+  packageJsonOrder?: string[]
 }
 ```
 
