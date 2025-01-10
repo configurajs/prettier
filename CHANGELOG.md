@@ -1,3 +1,9 @@
+## [0.1.1](https://github.com/configurajs/prettier/compare/v0.1.0...v0.1.1) (2025-01-10)
+
+### Features
+
+- support packageJsonOrder ([a7094b8](https://github.com/configurajs/prettier/commit/a7094b8242006e1a8c055ebf9e7a6bcc3dde1f9d))
+
 # [0.1.0](https://github.com/configurajs/prettier/compare/v0.0.3...v0.1.0) (2025-01-10)
 
 ## [0.0.3](https://github.com/configurajs/prettier/compare/v0.0.2...v0.0.3) (2025-01-10)
