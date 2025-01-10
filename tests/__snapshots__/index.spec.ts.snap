@@ -1,0 +1,110 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`test config > custom config 1`] = `
+{
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "^vue$",
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^~/(.*)$",
+    "^[.]",
+  ],
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "organizeImportsSkipDestructiveCodeActions": true,
+      },
+    },
+  ],
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-packagejson",
+    "prettier-plugin-test",
+  ],
+  "printWidth": 120,
+  "semi": true,
+  "singleQuote": true,
+  "vueIndentScriptAndStyle": true,
+}
+`;
+
+exports[`test config > option is undefined 1`] = `
+{
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "^vue$",
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^~/(.*)$",
+    "^[.]",
+  ],
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-packagejson",
+  ],
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+}
+`;
+
+exports[`test config > sortAtomicClass is false 1`] = `
+{
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "^vue$",
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^~/(.*)$",
+    "^[.]",
+  ],
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-packagejson",
+  ],
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+}
+`;
+
+exports[`test config > sortImports is false 1`] = `
+{
+  "importOrder": undefined,
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-packagejson",
+  ],
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+}
+`;
+
+exports[`test config > sortPackageJson is false 1`] = `
+{
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "^vue$",
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^~/(.*)$",
+    "^[.]",
+  ],
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+  ],
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+}
+`;
