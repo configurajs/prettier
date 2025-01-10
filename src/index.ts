@@ -1,16 +1,27 @@
-import { PluginConfig } from '@ianvs/prettier-plugin-sort-imports'
-import { Config as PrettierConfig } from 'prettier'
+import { Config } from 'prettier'
 import { normalizeToArray } from 'rattail'
 
-export type Config = PrettierConfig &
-  PluginConfig & {
-    packageSortOrder?: string[]
-  }
-
 export type DefineConfigOptions = Config & {
+  /**
+   * Whether to enable import sorting
+   * @default true
+   */
   sortImports?: boolean
+  /**
+   * Whether to enable atomic class sorting
+   * @default true
+   */
   sortAtomicClass?: boolean
+  /**
+   * Whether to enable package.json sorting
+   * @default true
+   */
   sortPackageJson?: boolean
+  /**
+   * Ordering of import statements
+   * @default ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]']
+   */
+  importsOrder?: string[]
 }
 
 export function defineConfig(options: DefineConfigOptions = {}): Config {
@@ -18,8 +29,7 @@ export function defineConfig(options: DefineConfigOptions = {}): Config {
     sortImports = true,
     sortAtomicClass = true,
     sortPackageJson = true,
-    packageSortOrder = [],
-    overrides = [],
+    importsOrder = ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]'],
     plugins = [],
     ...rest
   } = options
@@ -42,23 +52,8 @@ export function defineConfig(options: DefineConfigOptions = {}): Config {
     printWidth: 120,
     singleQuote: true,
     semi: false,
-    importOrder: sortImports
-      ? ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]']
-      : undefined,
+    importOrder: sortImports ? importsOrder : undefined,
     plugins: [...builtinPlugins, ...normalizeToArray(plugins)],
-    overrides: [
-      ...(sortPackageJson
-        ? [
-            {
-              files: '**/package.json',
-              options: {
-                packageSortOrder,
-              },
-            },
-          ]
-        : []),
-      ...normalizeToArray(overrides),
-    ],
     ...rest,
   }
 }

@@ -17,11 +17,12 @@
 
 ## Features
 
-- 📦 &nbsp; Provide universal prettier configuration
-- 🛠️ &nbsp; Written based on ts, providing complete ts types
-- 🌈 &nbsp; Highly scalable, easily customizable prettier config
+- 📦 &nbsp; Provide the most basic prettier configuration
+- 🛠️ &nbsp; Support for ordering import statements
+- 🌈 &nbsp; Support atomic CSS class sorting
+- 🌈 &nbsp; Support package json field sorting
 
-## Intro
+## Quick Start
 
 > [!TIP]
 > Please make sure that the prettier version is `3.0.0+`
@@ -37,77 +38,58 @@ yarn add @configurajs/prettier -D
 pnpm add @configurajs/prettier -D
 ```
 
-### Basic Usage
+### Usage
 
 ```js
-// prettier.config.mjs
+// prettier.config.js
 import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig()
 ```
 
+OR
+
 ```js
-// prettier.config.cjs
+// prettier.config.js
 const { defineConfig } = require('@configurajs/prettier')
 
 module.exports = defineConfig()
 ```
 
-### Advanced Configuration
-
-The default config includes two plugin [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) and [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss), which used to sort imports and classes.
+### Options
 
 ```js
-{
-  printWidth: 120,
-  singleQuote: true,
-  semi: false,
-  importOrder: ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]'],
-  plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss']
-}
-```
-
-If you don't want to enable these plugins, just update you config like this.
-
-```js
-{
-  singleQuote: true,
-  ...
-  /**
-   * set false to remove @ianvs/prettier-plugin-sort-imports plugin
-   */
-  sortImports: false,
-  /**
-   * set false to remove prettier-plugin-tailwindcss plugin
-   */
-  sortAtomicClass: false,
-}
-```
-
-If you want to add some you favorite rules, just do it like this.
-
-```js
-// prettier.config.mjs
+// prettier.config.js
 import { defineConfig } from '@configurajs/prettier'
 
-export default defineConfig({
-  // add your favorite prettier rules here
-  printWidth: 100,
-  quoteProps: 'as-needed',
-  singleAttributePerLine: true,
-})
+export default defineConfig({ ... })
 ```
 
-```js
-// prettier.config.cjs
-const { defineConfig } = require('@configurajs/prettier')
+```ts
+import { Config } from 'prettier'
 
-module.exports = defineConfig({
-  // add your favorite prettier rules here
-  printWidth: 100,
-  quoteProps: 'as-needed',
-  singleAttributePerLine: true,
-})
+export type DefineConfigOptions = Config & {
+  /**
+   * Whether to enable import sorting
+   * @default true
+   */
+  sortImports?: boolean
+  /**
+   * Whether to enable atomic class sorting
+   * @default true
+   */
+  sortAtomicClass?: boolean
+  /**
+   * Whether to enable package.json sorting
+   * @default true
+   */
+  sortPackageJson?: boolean
+  /**
+   * Ordering of import statements
+   * @default ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]']
+   */
+  importsOrder?: string[]
+}
 ```
 
 ## Contributors

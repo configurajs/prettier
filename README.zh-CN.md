@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4e0a0b81-7814-48b1-ae3d-9ce0511e0e9c" width="120" height="120" alt="logo" />
   <h1>Prettier</h1>
-  <p>简洁、通用的prettier配置</p>
+  <p>简洁、通用的 prettier 配置</p>
   <p>
     <span>中文</span> | 
     <a href="https://github.com/configurajs/prettier/blob/main/README.md">English</a>
@@ -17,11 +17,12 @@
 
 ## 特性
 
-- 📦 &nbsp；开箱即用
-- 🛠️ &nbsp；基于ts编写，提供完整的类型
-- 🌈 &nbsp；高度可扩展，易于定制
+- 📦 &nbsp; 提供最基本的 prettier 配置
+- 🌈 &nbsp; 支持 import 语句排序
+- 🌈 &nbsp; 支持原子化 css 类名排序
+- 🌈 &nbsp; 支持 package.json 字段排序
 
-## 介绍
+## 快速开始
 
 > [!TIP]
 > 支持的prettier最低版本是 `3.0.0`
@@ -37,77 +38,58 @@ yarn add @configurajs/prettier -D
 pnpm add @configurajs/prettier -D
 ```
 
-### 基础使用
+### 使用
 
 ```js
-// prettier.config.mjs
+// prettier.config.js
 import { defineConfig } from '@configurajs/prettier'
 
 export default defineConfig()
 ```
 
+OR
+
 ```js
-// prettier.config.cjs
+// prettier.config.js
 const { defineConfig } = require('@configurajs/prettier')
 
 module.exports = defineConfig()
 ```
 
-### 进阶配置
-
-默认配置包含 [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) 和 [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss), 这两个插件用来规范引入和样式
+### 选项
 
 ```js
-{
-  printWidth: 120,
-  singleQuote: true,
-  semi: false,
-  importOrder: ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]'],
-  plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss']
-}
-```
-
-如果你不想启用这两个插件，可参考下面示例
-
-```js
-{
-  singleQuote: true,
-  ...
-  /**
-   * 设置为false可移除 @ianvs/prettier-plugin-sort-imports
-   */
-  sortImports: false,
-  /**
-   * 设置为false可移除 prettier-plugin-tailwindcss
-   */
-  sortAtomicClass: false,
-}
-```
-
-如果你想修改prettier规则，可参考下面示例
-
-```js
-// prettier.config.mjs
+// prettier.config.js
 import { defineConfig } from '@configurajs/prettier'
 
-export default defineConfig({
-  // 添加你的prettier规则
-  printWidth: 100,
-  quoteProps: 'as-needed',
-  singleAttributePerLine: true,
-})
+export default defineConfig({ ... })
 ```
 
-```js
-// prettier.config.cjs
-const { defineConfig } = require('@configurajs/prettier')
+```ts
+import { Config } from 'prettier'
 
-module.exports = defineConfig({
-  // 添加你的prettier规则
-  printWidth: 100,
-  quoteProps: 'as-needed',
-  singleAttributePerLine: true,
-})
+export type DefineConfigOptions = Config & {
+  /**
+   * 是否启用 import 语句排序
+   * @default true
+   */
+  sortImports?: boolean
+  /**
+   * 是否启用原子化 css 类名排序
+   * @default true
+   */
+  sortAtomicClass?: boolean
+  /**
+   * 是否启用 package.json 字段排序
+   * @default true
+   */
+  sortPackageJson?: boolean
+  /**
+   * import 语句的排序顺序
+   * @default ['<BUILTIN_MODULES>', '^vue$', '^react$', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^~/(.*)$', '^[.]']
+   */
+  importsOrder?: string[]
+}
 ```
 
 ## 贡献者
