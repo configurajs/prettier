@@ -1,7 +1,15 @@
-## [0.0.2](https://github.com/configurajs/eslint/compare/v0.0.1...v0.0.2) (2025-01-06)
+# [0.1.0](https://github.com/configurajs/prettier/compare/v0.0.3...v0.1.0) (2025-01-10)
 
-## [0.0.1](https://github.com/configurajs/eslint/compare/e0962cf0fef04bf57570eeacdb964a9663d39fc2...v0.0.1) (2025-01-06)
+## [0.0.3](https://github.com/configurajs/prettier/compare/v0.0.2...v0.0.3) (2025-01-10)
 
 ### Features
 
-- init repo ([e0962cf](https://github.com/configurajs/eslint/commit/e0962cf0fef04bf57570eeacdb964a9663d39fc2))
+- support sorting package.json ([#1](https://github.com/configurajs/prettier/issues/1)) ([27e5a5d](https://github.com/configurajs/prettier/commit/27e5a5d8f0d11e1d0d6474b45be131c59a86ba25))
+
+## [0.0.2](https://github.com/configurajs/prettier/compare/v0.0.1...v0.0.2) (2025-01-06)
+
+## [0.0.1](https://github.com/configurajs/prettier/compare/e0962cf0fef04bf57570eeacdb964a9663d39fc2...v0.0.1) (2025-01-06)
+
+### Features
+
+- init repo ([e0962cf](https://github.com/configurajs/prettier/commit/e0962cf0fef04bf57570eeacdb964a9663d39fc2))
