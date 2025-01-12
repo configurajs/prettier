@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4e0a0b81-7814-48b1-ae3d-9ce0511e0e9c" width="120" height="120" alt="logo" />
   <h1>@configurajs/prettier</h1>
-  <p>A simple prettier flat configuration</p>
+  <p>A simple prettier configuration</p>
   <p>
     <span>English</span> | 
     <a href="https://github.com/configurajs/prettier/blob/main/README.zh-CN.md">中文介绍</a>
