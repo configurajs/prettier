@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4e0a0b81-7814-48b1-ae3d-9ce0511e0e9c" width="120" height="120" alt="logo" />
-  <h1>Prettier</h1>
-  <p>简洁、通用的 prettier 配置</p>
+  <h1>@configurajs/prettier</h1>
+  <p>一个简单易用的 prettier 预设</p>
   <p>
     <span>中文</span> | 
     <a href="https://github.com/configurajs/prettier/blob/main/README.md">English</a>
@@ -18,9 +18,9 @@
 ## 特性
 
 - 📦 &nbsp; 提供最基本的 prettier 配置
-- 🌈 &nbsp; 支持 import 语句排序
-- 🌈 &nbsp; 支持原子化 css 类名排序
-- 🌈 &nbsp; 支持 package.json 字段排序
+- 📦 &nbsp; 支持 import 语句排序
+- 📦 &nbsp; 支持原子化 css 类名排序
+- 📦 &nbsp; 支持 package.json 字段排序
 
 ## 快速开始
 

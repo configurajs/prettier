@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4e0a0b81-7814-48b1-ae3d-9ce0511e0e9c" width="120" height="120" alt="logo" />
-  <h1>Prettier</h1>
+  <h1>@configurajs/prettier</h1>
   <p>A simple prettier flat configuration</p>
   <p>
     <span>English</span> | 
@@ -18,9 +18,9 @@
 ## Features
 
 - 📦 &nbsp; Provide the most basic prettier configuration
-- 🛠️ &nbsp; Support for ordering import statements
-- 🌈 &nbsp; Support atomic CSS class sorting
-- 🌈 &nbsp; Support package json field sorting
+- 📦 &nbsp; Support for ordering import statements
+- 📦 &nbsp; Support atomic CSS class sorting
+- 📦 &nbsp; Support package json field sorting
 
 ## Quick Start
 
