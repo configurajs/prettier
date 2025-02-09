@@ -1,3 +1,9 @@
+## [0.1.3](https://github.com/configurajs/prettier/compare/v0.1.2...v0.1.3) (2025-02-09)
+
+### Bug Fixes
+
+- remove config useless option ([9d51649](https://github.com/configurajs/prettier/commit/9d51649573b24cbbb9af8040f8b900128794ec1f))
+
 ## [0.1.2](https://github.com/configurajs/prettier/compare/v0.1.1...v0.1.2) (2025-01-15)
 
 ## [0.1.1](https://github.com/configurajs/prettier/compare/v0.1.0...v0.1.1) (2025-01-10)
@@ -6,7 +12,9 @@
 
 - support packageJsonOrder ([a7094b8](https://github.com/configurajs/prettier/commit/a7094b8242006e1a8c055ebf9e7a6bcc3dde1f9d))
 
-# [0.1.0](https://github.com/configurajs/prettier/compare/v0.0.2...v0.1.0) (2025-01-10)
+# [0.1.0](https://github.com/configurajs/prettier/compare/v0.0.3...v0.1.0) (2025-01-10)
+
+## [0.0.3](https://github.com/configurajs/prettier/compare/v0.0.2...v0.0.3) (2025-01-10)
 
 ### Features
 
