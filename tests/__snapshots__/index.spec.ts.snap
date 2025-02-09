@@ -125,7 +125,6 @@ exports[`test config > sortAtomicClass is false 1`] = `
 
 exports[`test config > sortImports is false 1`] = `
 {
-  "importOrder": undefined,
   "packageSortOrder": [],
   "plugins": [
     "prettier-plugin-tailwindcss",
@@ -148,7 +147,6 @@ exports[`test config > sortPackageJson is false 1`] = `
     "^~/(.*)$",
     "^[.]",
   ],
-  "packageSortOrder": undefined,
   "plugins": [
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
