@@ -1,3 +1,9 @@
+## [0.1.4](https://github.com/configurajs/prettier/compare/v0.1.3...v0.1.4) (2025-02-10)
+
+### Features
+
+- add endOfLine config to defineConfig ([#2](https://github.com/configurajs/prettier/issues/2)) ([e90f4be](https://github.com/configurajs/prettier/commit/e90f4be50b91856e709b0049da59147f816280c7))
+
 ## [0.1.3](https://github.com/configurajs/prettier/compare/v0.1.2...v0.1.3) (2025-02-09)
 
 ### Bug Fixes
@@ -12,9 +18,7 @@
 
 - support packageJsonOrder ([a7094b8](https://github.com/configurajs/prettier/commit/a7094b8242006e1a8c055ebf9e7a6bcc3dde1f9d))
 
-# [0.1.0](https://github.com/configurajs/prettier/compare/v0.0.3...v0.1.0) (2025-01-10)
-
-## [0.0.3](https://github.com/configurajs/prettier/compare/v0.0.2...v0.0.3) (2025-01-10)
+# [0.1.0](https://github.com/configurajs/prettier/compare/v0.0.2...v0.1.0) (2025-01-10)
 
 ### Features
 
