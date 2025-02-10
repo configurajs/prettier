@@ -2,6 +2,7 @@
 
 exports[`test config > custom config 1`] = `
 {
+  "endOfLine": "auto",
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^vue$",
@@ -35,6 +36,7 @@ exports[`test config > custom config 1`] = `
 
 exports[`test config > custom importsOrder 1`] = `
 {
+  "endOfLine": "auto",
   "importOrder": [
     "^@/(.*)$",
     "^~/(.*)$",
@@ -54,6 +56,7 @@ exports[`test config > custom importsOrder 1`] = `
 
 exports[`test config > custom packageJsonOrder 1`] = `
 {
+  "endOfLine": "auto",
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^vue$",
@@ -80,6 +83,7 @@ exports[`test config > custom packageJsonOrder 1`] = `
 
 exports[`test config > option is undefined 1`] = `
 {
+  "endOfLine": "auto",
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^vue$",
@@ -103,6 +107,7 @@ exports[`test config > option is undefined 1`] = `
 
 exports[`test config > sortAtomicClass is false 1`] = `
 {
+  "endOfLine": "auto",
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^vue$",
@@ -125,6 +130,7 @@ exports[`test config > sortAtomicClass is false 1`] = `
 
 exports[`test config > sortImports is false 1`] = `
 {
+  "endOfLine": "auto",
   "packageSortOrder": [],
   "plugins": [
     "prettier-plugin-tailwindcss",
@@ -138,6 +144,7 @@ exports[`test config > sortImports is false 1`] = `
 
 exports[`test config > sortPackageJson is false 1`] = `
 {
+  "endOfLine": "auto",
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^vue$",
