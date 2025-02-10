@@ -54,12 +54,13 @@ export function defineConfig(options: DefineConfigOptions = {}): Config {
     builtinPlugins.push('prettier-plugin-packagejson')
   }
 
-  const config = {
+  const config: Config = {
     printWidth: 120,
     singleQuote: true,
     semi: false,
     importOrder: importsOrder,
     packageSortOrder: packageJsonOrder,
+    endOfLine: 'auto',
     plugins: [...builtinPlugins, ...normalizeToArray(plugins)],
     ...rest,
   }
