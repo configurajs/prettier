@@ -1,5 +1,4 @@
 import { Config } from 'prettier'
-import { normalizeToArray } from 'rattail'
 
 export type DefineConfigOptions = Config & {
   /**
@@ -61,7 +60,7 @@ export function defineConfig(options: DefineConfigOptions = {}): Config {
     importOrder: importsOrder,
     packageSortOrder: packageJsonOrder,
     endOfLine: 'auto',
-    plugins: [...builtinPlugins, ...normalizeToArray(plugins)],
+    plugins: [...builtinPlugins, ...plugins],
     ...rest,
   }
 
